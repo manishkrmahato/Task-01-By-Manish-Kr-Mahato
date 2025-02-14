@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #e9ecef;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 60%;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #343a40;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #495057;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: #f8f9fa;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .checkbox-group label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #495057;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .btn {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn input {
+            flex: 1;
+            cursor: pointer;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn input[type="submit"] {
+            background: #28a745;
+            color: white;
+            border: none;
+        }
+
+        .btn input[type="reset"] {
+            background: #dc3545;
+            color: white;
+            border: none;
+        }
+
+        .btn input:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn input[type="submit"]:hover {
+            background: #218838;
+        }
+
+        .btn input[type="reset"]:hover {
+            background: #c82333;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .btn {
+                flex-direction: column;
+            }
+
+            .btn input {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form action="#" method="POST">
+
+            <label for="fn">First Name</label>
+            <input type="text" id="fn" name="fn" required>
+
+            <label for="ln">Last Name</label>
+            <input type="text" id="ln" name="ln" required>
+
+            <label for="gen">Gender</label>
+            <select name="gen" id="gen" required>
+                <option value="">Select</option>
+                <option value="m">Male</option>
+                <option value="f">Female</option>
+                <option value="o">Other</option>
+            </select>
+
+            <label for="sub">Subject of Interest</label>
+            <input type="text" id="sub" name="sub" required>
+
+            <label for="lang">Languages Known</label>
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" name="lang" value="english"> English
+                </label>
+                <label>
+                    <input type="checkbox" name="lang" value="hindi"> Hindi
+                </label>
+                <label>
+                    <input type="checkbox" name="lang" value="spanish"> Spanish
+                </label>
+                <label>
+                    <input type="checkbox" name="lang" value="french"> French
+                </label>
+                <label>
+                    <input type="checkbox" name="lang" value="german"> German
+                </label>
+                <label>
+                    <input type="checkbox" name="lang" value="chinese"> Chinese
+                </label>
+                <label>
+                    <input type="checkbox" name="lang" value="japanese"> Japanese
+                </label>
+                <label>
+                    <input type="checkbox" name="lang" value="italian"> Italian
+                </label>
+                <label>
+                    <input type="checkbox" name="lang" value="portuguese"> Portuguese
+                </label>
+            </div>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="ph">Contact No.</label>
+            <input type="tel" id="ph" name="ph" required>
+
+            <label for="addr">Address</label>
+            <textarea name="addr" id="addr" required></textarea>
+
+            <label for="pin">Pin Code</label>
+            <input type="text" id="pin" name="pin" required>
+
+            <label for="st">State</label>
+            <input type="text" id="st" name="st" required>
+
+            <label for="ctry">Country</label>
+            <input type="text" id="ctry" name="ctry" required>
+
+            <div class="btn">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
